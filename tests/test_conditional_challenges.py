@@ -57,8 +57,3 @@ class TestCase(unittest.TestCase):
                 self.fail(msg=f"Input: {case[0]} \nYour function returned {type(result)} instead of a boolean!")
 
             self.assertEqual(result, case[1], msg=f"With input {case[0]} your function returned {result}. The password is 'quartzgleam?1!', so the correct result was {case[1]}!")
-
-
-runner = unittest.TextTestRunner(verbosity=2)
-
-runner.run(unittest.TestSuite((unittest.TestLoader().loadTestsFromTestCase(TestCase))))
