@@ -27,15 +27,17 @@ def red_light_camera(light_colour: str, car_detected: bool):
 
     Returns: A boolean that is true if a car ran the red light, and false otherwise.
     """
-    if light_colour == "red" and car_detected:
+    if light_colour == "Red" and car_detected:
         return True
-    elif light_colour=="amber" and car_detected:
-         return False
-    elif light_colour=="green" and car_detected:
-         return False
+    elif light_colour=="Amber" and car_detected:
+        return False
+    elif light_colour=="Green" and car_detected:
+        return False
     else:
         return False
-print(red_light_camera("red", True))
+# return light_colour =="Red" and car_detected
+
+# print(red_light_camera("red", True))
 
 def can_ride_rollercoaster(rider_height: float):
     """Only people who are over 120cm in height can ride the rollercoaster.
@@ -48,9 +50,11 @@ def can_ride_rollercoaster(rider_height: float):
 
     if rider_height > 120:
         return True
-    elif rider_height < 120:
+    else:
         return False
-print(can_ride_rollercoaster(140))
+    
+    # return rider_height > 120
+# print(can_ride_rollercoaster(140))
 
 def login(password: str):
     """Only users who enter the password "quartzgleam?1" can log in successfully.
@@ -62,9 +66,9 @@ def login(password: str):
         - a boolean representing whether or not the user's password was correct.
     """
 
-    if input(password =="quartzgleam?1"):
+    if password =="quartzgleam?1":
         return True
     else:
         return False
-password = "quartzgleam?1"
-login(password)
+
+# return password =="quartzgleam?1"
